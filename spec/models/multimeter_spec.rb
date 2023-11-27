@@ -18,4 +18,14 @@ RSpec.describe Multimeter, type: :model do
 
   end
 
+  describe "Teste de validação do model Multimeter" do
+    
+    it "Multimeter valido com campos obrigatorios preenchidos?" do
+      @multimeter.mult_type = ""
+      @multimeter.description = ""
+      expect(@multimeter).to be_valid
+    end
+    
+  end
+
 end
