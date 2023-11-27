@@ -24,7 +24,7 @@ RSpec.describe Api::V1::MultimetersController, type: :controller do
     it "Consegue criar um multimeter e retornar status 201?" do
       post :create, params: {multimeter: {mult_type: "analogico", description: "multimetro antigo"}, format: :json}
       expect(response.body).to include_json(mult_type: "analogico")
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(201)
     end
   end  
 
