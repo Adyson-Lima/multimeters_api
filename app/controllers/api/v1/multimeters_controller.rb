@@ -1,6 +1,6 @@
 class Api::V1::MultimetersController < ApplicationController
 
-  before_action :set_multimeter, only: %i[show update]# show update destroy
+  before_action :set_multimeter, only: %i[show update destroy]# show update destroy
 
   def index
     @multimeters = Multimeter.all 
@@ -26,6 +26,10 @@ class Api::V1::MultimetersController < ApplicationController
     else
       render json: @multimeter.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @multimeter.destroy!
   end
 
 private
