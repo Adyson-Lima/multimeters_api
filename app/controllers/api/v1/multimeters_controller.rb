@@ -1,6 +1,6 @@
 class Api::V1::MultimetersController < ApplicationController
 
-  before_action :set_multimeter, only: %i[show]# show update destroy
+  before_action :set_multimeter, only: %i[show update]# show update destroy
 
   def index
     @multimeters = Multimeter.all 
@@ -15,6 +15,14 @@ class Api::V1::MultimetersController < ApplicationController
     @multimeter = Multimeter.new(multimeter_params)
     if @multimeter.save
       render json: @multimeter, status: :created, location: api_v1_multimeter_url(@multimeter)
+    else
+      render json: @multimeter.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @multimeter.update(multimeter_params)
+      render json: @multimeter
     else
       render json: @multimeter.errors, status: :unprocessable_entity
     end
