@@ -12,7 +12,7 @@ RSpec.describe Multimeter, type: :model do
     end
 
     it "description consegue ser preenchido?" do
-      @multimeter.description = ""
+      @multimeter.description = "multimetro antigo"
       expect(@multimeter.description).to eq("multimetro antigo")
     end
 

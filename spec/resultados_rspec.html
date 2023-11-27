@@ -288,35 +288,13 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Teste de preenchimento do model Multimeter</dt>
     <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">mult_type consegue ser preenchido?</span><span class='duration'>0.02926s</span></dd>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_2');</script>
-    <script type="text/javascript">makeRed('example_group_2');</script>
+    <dd class="example passed"><span class="passed_spec_name">mult_type consegue ser preenchido?</span><span class='duration'>0.04722s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">description consegue ser preenchido?</span>
-      <span class="duration">0.00524s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(@multimeter.description).to eq(&quot;multimetro antigo&quot;)
-
-    expected: &quot;multimetro antigo&quot;
-         got: &quot;&quot;
-
-    (compared using ==)
-  # ./spec/models/multimeter_spec.rb:16:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/models/multimeter_spec.rb:16:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">14</span>    it "description consegue ser preenchido?" do
-<span class="linenum">15</span>      @multimeter.description = ""
-<span class="offending"><span class="linenum">16</span>      expect(@multimeter.description).to eq("multimetro antigo")</span>
-<span class="linenum">17</span>    end
-<span class="linenum">18</span>
-<span class="linenum">19</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">description consegue ser preenchido?</span><span class='duration'>0.00210s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.04440 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "2 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.05325 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "2 examples, 0 failures";</script>
 </div>
 </div>
 </body>
