@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Api::V1::MultimetersController, type: :controller do
 
-  before{@multimeter.create(mult_type: "bancada", description: "multimetro caro")}
+  before{@multimeter = Multimeter.create(mult_type: "bancada", description: "multimetro caro")}
 
   describe "GET /api/v1/multimeters" do
     it "Consegue listar todos os multimeters e retornar status 200?" do
