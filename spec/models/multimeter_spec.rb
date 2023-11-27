@@ -25,6 +25,11 @@ RSpec.describe Multimeter, type: :model do
       @multimeter.description = "multimetro mais utilizado"
       expect(@multimeter).to be_valid
     end
+
+    it "Multimeter invalido com campos obrigatorios não preenchidos?" do
+      multimeter = Multimeter.new
+      expect(multimeter).to be_valid
+    end
     
   end
 
