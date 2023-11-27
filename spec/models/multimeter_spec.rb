@@ -11,6 +11,11 @@ RSpec.describe Multimeter, type: :model do
       expect(@multimeter.mult_type).to eq("analogico")
     end
 
+    it "description consegue ser preenchido?" do
+      @multimeter.description = ""
+      expect(@multimeter.description).to eq("multimetro antigo")
+    end
+
   end
 
 end
