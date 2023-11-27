@@ -1,10 +1,14 @@
 class Api::V1::MultimetersController < ApplicationController
 
-  #before_action :set_multimeter, only: %i[]# show update destroy
+  before_action :set_multimeter, only: %i[show]# show update destroy
 
   def index
     @multimeters = Multimeter.all 
     render json: @multimeters
+  end
+
+  def show
+    render json: @multimeter
   end
 
 private
