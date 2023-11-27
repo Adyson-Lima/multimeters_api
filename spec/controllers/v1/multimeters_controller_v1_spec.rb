@@ -28,4 +28,13 @@ RSpec.describe Api::V1::MultimetersController, type: :controller do
     end
   end  
 
+  describe "PATCH /api/v1/multimeters/id" do
+    it "Consegue atualizar um multimeter e retornar status 200?" do
+      multimeter = Multimeter.last
+      patch :update, params: {multimeter: {mult_type: "digital", description: "multimetro comum"}, id: multimeter.id}
+      expect(response.body).to include_json(mult_type: "digital")
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
