@@ -7,7 +7,7 @@ RSpec.describe Multimeter, type: :model do
   describe "Teste de preenchimento do model Multimeter" do
 
     it "mult_type consegue ser preenchido?" do
-      @multimeter.mult_type = ""
+      @multimeter.mult_type = "analogico"
       expect(@multimeter.mult_type).to eq("analogico")
     end
 

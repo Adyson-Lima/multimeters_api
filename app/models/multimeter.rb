@@ -1,0 +1,2 @@
+class Multimeter < ApplicationRecord
+end
