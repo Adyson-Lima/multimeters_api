@@ -37,4 +37,13 @@ RSpec.describe Api::V1::MultimetersController, type: :controller do
     end
   end
 
+  describe "DELETE /api/v1/multimeters/id" do
+    it "Consegue excluir um multimeter e retornar status 204?" do
+      multimeter = Multimeter.last
+      delete :destroy, params: {id: multimeter.id}
+      expect(Multimeter.all).not_to include(multimeter)
+      expect(response).to have_http_status(204)
+    end
+  end
+
 end
